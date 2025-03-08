@@ -1,0 +1,107 @@
+{
+	"info": {
+		"_postman_id": "82c0b7e4-8dfb-48c0-a36f-2127dcdd9a60",
+		"name": "Assignment 1: University Registration Form API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Student Information",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/students/1005?include_grades=true&semester=Fall2024",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"students",
+						"1005"
+					],
+					"query": [
+						{
+							"key": "include_grades",
+							"value": "true"
+						},
+						{
+							"key": "semester",
+							"value": "Fall2024"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register Student",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"John Doe\",\n    \"email\": \"john.doe4@example.com\",\n    \"age\": 22,\n    \"courses\": [\n        \"Mathematics\",\n        \"Physics\",\n        \"Chemistry\"\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/students/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"students",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Student Email",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"john.doe1001@example.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/students/1001/email",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"students",
+						"1001",
+						"email"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

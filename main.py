@@ -84,7 +84,6 @@ def register_student(student: Student):
 
 @app.put("/students/{student_id}/email")
 def update_student_email(student_id: int, body: StudentEmail):
-    print("body", body)
     email = body.email
     try:
         if student_id <= 1000:
